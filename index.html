@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next Door Scholars - Home</title>
+    <link rel="stylesheet" href="css_style.css">
+</head>
+
+<body>
+
+    <header class="header">
+      <div class="container navbar">
+        <div class="brand">
+          <img src="images/next_door.jpg" alt="Next Door Scholars Logo">
+          <div>
+            <div style="font-weight:700;color:var(--white);font-size:18px">NEXT DOOR SCHOLARS</div>
+            <div style="color:rgba(255,255,255,0.85);font-size:13px">Opening the next door to higher education</div>
+          </div>
+        </div>
+
+        <!-- Hamburger menu button -->
+        <div class="menu-toggle" id="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <!-- Navigation Links -->
+        <nav>
+          <div class="nav-links" id="nav-links">
+            <a href="home_page.html">Home</a>
+            <a href="programes.html">Programs</a>
+            <a href="about.html">About</a>
+            <a href="impact.html">Impact</a>
+            <a href="get-involved.html">Get Involved</a>
+            <a href="teams_page.html">Our Team</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="body-section">
+        <div class="container hero">
+          <div class="hero-left">
+            <h1>OPENING THE<br/>NEXT DOOR TO<br/>HIGHER EDUCATION</h1>
+            <p>In South Sudan, conflict and poverty have shut millions of young people out of school. Next Door Scholars helps refugee and host-community youth unlock the education, mentorship, and resources they need to step into university—and into their future.</p>
+            <div class="hero-buttons">
+              <a href="get-involved.html" class="btn btn-mentor">MENTOR</a>
+              <a href="get-involved.html" class="btn btn-mentor">DONATE</a>
+            </div>
+
+            <div class="info-row">
+              <div class="card center">
+                <img src="images/about.jpg" alt="" style="width:64px;height:64px;margin-bottom:8px"/>
+                <h3>ABOUT US</h3>
+                <p>Founded in Juba in 2025, bridging the gap between aspiration and achievement for refugees and host-community youth.</p>
+              </div>
+              <div class="card center">
+                <img src="images/programs.jpg" alt="" style="width:64px;height:64px;margin-bottom:8px"/>
+                <h3>PROGRAMS</h3>
+                <p>College readiness, mentorship, scholarship guidance, leadership & soft skills.</p>
+              </div>
+              <div class="card center">
+                <img src="images/impact.jpg" alt="" style="width:64px;height:64px;margin-bottom:8px"/>
+                <h3>IMPACT</h3>
+                <p>150+ youth reached, 90% successful applications, 65% female participation.</p>
+              </div>
+              <div class="card center">
+                <img src="images/get_involved.jpg" alt="" style="width:64px;height:64px;margin-bottom:8px"/>
+                <h3>GET INVOLVED</h3>
+                <p>Become a mentor, partner with us, or donate to support students.</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <img src="images/home_pic.jpg" alt="Hero image" style="width:100%;border-radius:12px;object-fit:cover;height: 600px"/>
+          </div>
+        </div>
+      </section>
+    </main>
+
+   <footer>
+  <div class="footer-grid">
+    <div class="footer-col-logo">
+      <img src="images/footer_logo.jpg" alt="Logo" style="max-width:180px;">
+      <p><b>Opening doors to higher education for South Sudanese youth</b></p>
+      <p>Juba, South Sudan<br>hello@nextdoorscholars.org<br>+211924261878</p>
+    </div>
+
+    <div class="footer-col">
+      <h3>Quick Links</h3>
+      <p>
+        <a href="home_page.html">Home</a><br>
+        <a href="about.html">About Us</a><br>
+        <a href="programes.html">Programs</a><br>
+        <a href="impact.html">Impact</a><br>
+        <a href="get-involved.html">Get Involved</a><br>
+        <a href="contact.html">Contact</a><br>
+        <a href="teams_page.html">Our Team</a>
+      </p>
+    </div>
+
+    <div class="footer-col">
+      <h3>Accreditation & Partners</h3>
+      <div class="footer-partners">
+        <img src="images/garang_memorial.jpg" alt="Partner 1">
+        <img src="images/bor_college.jpg" alt="Partner 2">
+        <img src="images/Salaam_college.jpg" alt="Partner 3">
+        <img src="images/superior_highschool.jpg" alt="Partner 4">
+        <img src="images/ministryss.jpg" alt="Partner 5">
+        <img src="images/uoj.jpg" alt="Partner 6">
+        <img src="images/unicef.jpg" alt="Partner 7">
+      </div>
+
+      <h3>Social Media Links</h3>
+      <div class="socials">
+        <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+        <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+        <a href="#"><img src="images/linkedin.png" alt="LinkedIn"></a>
+        <a href="#"><img src="images/youtube.png" alt="YouTube"></a>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div>© 2023–2025 Next Door Scholars. All Rights Reserved.</div>
+    <div><a href="#">Privacy Policy</a> / <a href="#">Terms of Use</a></div>
+  </div>
+</footer>
+
+
+    <!-- ✅ Place JavaScript here, AFTER the elements exist -->
+    <script>
+      const menuToggle = document.getElementById('menu-toggle');
+      const navLinks = document.getElementById('nav-links');
+
+      menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active');
+        navLinks.classList.toggle('show');
+        document.body.classList.toggle('menu-open');
+      });
+
+      // Close menu when a link is clicked
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+          menuToggle.classList.remove('active');
+          navLinks.classList.remove('show');
+          document.body.classList.remove('menu-open');
+        });
+      });
+    </script>
+
+</body>
+</html>
